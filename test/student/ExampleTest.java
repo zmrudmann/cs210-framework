@@ -15,6 +15,7 @@ import core.Server;
  * It is not required for submission and can
  * be deleted if desired.
  */
+@Deprecated
 public class ExampleTest {
 	private static Server SERVER;
 	
