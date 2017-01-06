@@ -1,7 +1,19 @@
 machine:
-  java:
-    version: oraclejdk8
+    java:
+        version: oraclejdk8
+    timezone:
+        America/New_York
+
+general:
+    branches:
+        only:
+            - master # only build/deploy from master
+        artifacts:
+            - "build/reports/tests" # preserve the generated HTML test reports
 
 test:
-  override:
-    - ./gradlew test
+    override:
+        - ./gradlew test -is
+    post:
+        - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+        - find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
