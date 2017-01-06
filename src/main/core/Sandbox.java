@@ -7,8 +7,8 @@ import adt.Response;
  * testing of the rest of the project components.
  * 
  * It is not required for submission and can
- * be deleted if desired. You should use unit
- * tests for testing when possible.
+ * be deleted if desired. You should instead use
+ * proper unit tests for testing when possible.
  */
 @Deprecated
 public class Sandbox {
