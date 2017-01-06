@@ -8,8 +8,8 @@ general:
     branches:
         only:
             - master # only build/deploy from master
-        artifacts:
-            - "build/reports/tests" # preserve the generated HTML test reports
+    artifacts:
+        - "build/reports/tests" # preserve the generated HTML test reports
 
 test:
     override:
