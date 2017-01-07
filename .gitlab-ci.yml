@@ -5,4 +5,4 @@ image: openjdk:8
 
 all_tests:
     script:
-        - echo Hello, build!
+        - gradle test
