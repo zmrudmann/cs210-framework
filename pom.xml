@@ -1,5 +1,10 @@
 <project>
     <name>Example Tester</name>
+
+    <groupId>org.reaser.gitlab</groupId>
+    <artifactId>example</artifactId>
+    <version>1.0</version>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
