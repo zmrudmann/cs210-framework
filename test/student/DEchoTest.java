@@ -19,14 +19,14 @@ import core.Server;
 public class DEchoTest {
 	private static Server SERVER;
 	private static String query;
-	private static Response r;
+	private static Response response;
 	
 	@BeforeClass
 	public static void initialize() {
 		SERVER = new Server();
 		
 		query = "ECHO \"Hello, world!\"";
-		r = SERVER.interpret(query).get(0);
+		response = SERVER.interpret(query).get(0);
 	};
 	
 	@Test
@@ -34,7 +34,7 @@ public class DEchoTest {
 		assertEquals(
 			"Query <" + query + "> must succeed,",
 			true,
-			r.get("success")
+			response.get("success")
 		);
 	}
 	
@@ -43,7 +43,7 @@ public class DEchoTest {
 		assertEquals(
 			"Query <" + query + "> must return correct message,",
 			"Hello, world!",
-			r.get("message")
+			response.get("message")
 		);
 	}
 	
@@ -52,7 +52,7 @@ public class DEchoTest {
 		assertEquals(
 			"Query <" + query + "> must not return table,",
 			null,
-			r.get("table")
+			response.get("table")
 		);
 	}
 }
