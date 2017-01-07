@@ -1,0 +1,8 @@
+image: openjdk:8
+
+# services:
+#   - maven
+
+all_tests:
+    script:
+        - echo Hello, build!
