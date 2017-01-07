@@ -1,7 +1,7 @@
 image: openjdk:8
 
-# services:
-#     - maven:latest
+services:
+    - maven:latest
 
 provided-tests:
     environment:
