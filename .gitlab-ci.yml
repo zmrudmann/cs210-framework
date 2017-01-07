@@ -5,4 +5,4 @@ tests:
         - master
     script:
         - echo Hello, world!
-        - gradle --version
+        - ant --version
