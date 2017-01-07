@@ -2,7 +2,7 @@ image: openjdk:8
 
 provided-tests:
     environment:
-        - student
+        name: student
     tags:
         - java
     only:
