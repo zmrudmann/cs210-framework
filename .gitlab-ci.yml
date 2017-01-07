@@ -1,8 +1,6 @@
-image: ruby
-
-# services:
-#   - maven
-
-all_tests:
-    script:
-        - gradle test
+provided-tests:
+    environment: "student"
+    image: "openjdk:8"
+    tags: "java"
+    only: "master"
+    script: "gradle test"
