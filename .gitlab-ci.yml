@@ -1,5 +1,8 @@
 image: openjdk:8
 
+before_script:
+    - apt-get install gradle
+
 provided-tests:
     environment:
         name: student
@@ -9,4 +12,4 @@ provided-tests:
         - master
     script:
         - echo Hello, world!
-        # - gradle test
+        - gradle test
