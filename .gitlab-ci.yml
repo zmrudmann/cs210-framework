@@ -1,10 +1,8 @@
-tests: # the name of the build to run
-    environment: # the environment to categorize the results
-        name: student
-    tags: # for selecting a compatibile runner
+tests:
+    tags:
         - java
-    only: # limit the branch to test
+    only:
         - master
     script:
-        # - echo Hello, world!
+        - echo Hello, world!
         - mvn test
