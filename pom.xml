@@ -7,14 +7,15 @@
     <artifactId>example</artifactId>
     <version>1.0</version>
 
+    <properties>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    
     <build>
-      <directory>${project.basedir}/target</directory>
-      <outputDirectory>${project.build.directory}/classes</outputDirectory>
-      <finalName>${project.artifactId}-${project.version}</finalName>
-      <testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
       <sourceDirectory>${project.basedir}/src</sourceDirectory>
       <testSourceDirectory>${project.basedir}/test</testSourceDirectory>
-  </build>
+    </build>
 
     <dependencies>
         <dependency>
