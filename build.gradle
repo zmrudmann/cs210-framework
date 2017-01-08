@@ -1,7 +1,5 @@
 apply plugin: 'java'
 
-apply plugin: 'jacoco'
-
 repositories {
     mavenCentral()
 }
@@ -22,15 +20,5 @@ test {
     }
     reports {
         html.destination 'reports/unit-tests'
-    }
-}
-
-jacoco {
-    reportsDir 'reports/code-coverage/ja'
-}
-
-jacocoTestReport {
-    reports {
-        html.destination 'reports/code-coverage/jatr'
     }
 }
