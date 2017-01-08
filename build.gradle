@@ -20,6 +20,11 @@ test {
         showCauses true
         showStackTraces true
         events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+
+        debug.events = events
+        debug.exceptionFormat = exceptionFormat
+        info.events = debug.events
+        info.exceptionFormat = debug.exceptionFormat
     }
     reports.html.destination 'reports/'
 }
