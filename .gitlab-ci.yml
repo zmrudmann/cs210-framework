@@ -11,8 +11,8 @@ tests:
         # - mvn test
         - gradle test
 
-    # artifacts:
-    #     when: always
-    #     name: reports
-    #     paths:
-    #         - reports/
+    artifacts:
+        when: always
+        name: reports
+        paths:
+            - reports/
