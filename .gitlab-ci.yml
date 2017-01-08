@@ -4,5 +4,5 @@ tests:
     only:
         - master
     script:
-        - echo Hello, world!
+        # - echo Hello, world!
         - mvn test
