@@ -22,7 +22,3 @@ test {
         html.destination 'reports/unit-tests'
     }
 }
-
-logging {
-    captureStandardOutput LogLevel.INFO
-}
