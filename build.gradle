@@ -1,5 +1,7 @@
 apply plugin: 'java'
 
+apply plugin: 'jacoco'
+
 repositories {
     mavenCentral()
 }
@@ -18,11 +20,13 @@ test {
         showStandardStreams true
         exceptionFormat 'full'
     }
-    reports.html.destination 'reports/junit'
+    reports {
+        html.destination 'reports/junit'
+    }
 }
 
-apply plugin: 'jacoco'
-
-jacoco {
-    reports.html.destination 'reports/jacoco'
+jacocoTestReport {
+    reports {
+        html.destination "${buildDir}/jacocoHtml"
+    }
 }
