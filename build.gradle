@@ -23,8 +23,8 @@ test {
 
         afterSuite { desc, result ->
             if (!desc.parent) {
-                def percent = result.successfulTestCount / result.testCount * 100
-                def output = "[SUMMARY] ${percent.round(2)}% passing | [${result.resultType} DETAILS] ${result.testCount} tests (${result.successfulTestCount} pass, ${result.failedTestCount} fail, ${result.skippedTestCount} skip)"
+                def percent = (int) (result.successfulTestCount / result.testCount * 100)
+                def output = "[SUMMARY] ${percent}% passing | [${result.resultType} DETAILS] ${result.testCount} tests (${result.successfulTestCount} pass, ${result.failedTestCount} fail, ${result.skippedTestCount} skip)"
                 println(output)
             }
         }
