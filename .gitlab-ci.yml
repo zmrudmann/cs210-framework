@@ -5,8 +5,9 @@ tests:
         - master
     script:
         - mvn test
-    artifacts:
-        when: always
-        name: reports
-        paths:
-            - reports/
+        - ls .
+    # artifacts:
+    #     when: always
+    #     name: reports
+    #     paths:
+    #         - reports/
