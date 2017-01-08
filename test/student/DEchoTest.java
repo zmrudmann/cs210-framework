@@ -29,7 +29,7 @@ public class DEchoTest {
 	public static void initialize() {
 		SERVER = new Server();
 		
-		query = "ECHO \"Hello, World!\"";
+		query = "ECHO \"Hello, world!\"";
 		responses = SERVER.interpret(query);
 		
 		System.out.println("Hello, standard output!");
