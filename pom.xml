@@ -7,8 +7,8 @@
     <artifactId>example</artifactId>
     <version>1.0</version>
 
-  <sourceDirectory>${project.basedir}/src/</sourceDirectory>
-  <testSourceDirectory>${project.basedir}/test</testSourceDirectory>
+  <sourceDirectory>/src/</sourceDirectory>
+  <testSourceDirectory>/test</testSourceDirectory>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
