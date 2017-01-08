@@ -9,6 +9,10 @@ dependencies {
 }
 
 sourceSets {
-    main.java. srcDir 'src'
+    main.java.srcDir 'src'
     test.java.srcDir 'test'
+}
+
+test {
+    reports.html.destination "reports"
 }
