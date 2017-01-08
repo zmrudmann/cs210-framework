@@ -22,7 +22,7 @@ test {
         events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
 
         afterSuite { desc, result ->
-            if (!desc.parent) println('\n[COVERAGE ' + ((int) (result.successfulTestCount / result.testCount * 100)) + '%]')
+            if (!desc.parent) println('\n[COVERAGE ' + Math.round(result.successfulTestCount / result.testCount * 100) + '%]')
         }
     }
     reports.html.destination 'reports/'
