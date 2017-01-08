@@ -7,7 +7,7 @@
     <artifactId>example</artifactId>
     <version>1.0</version>
 
-    <test>
+    <build>
       <sourceDirectory>${project.basedir}/src/</sourceDirectory>
       <testSourceDirectory>${project.basedir}/test</testSourceDirectory>
         <dependencies>
@@ -17,5 +17,5 @@
                 <version>4.12</version>
             </dependency>
         </dependencies>
-    </test>
+    </build>
 </project>
