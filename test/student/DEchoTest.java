@@ -31,6 +31,8 @@ public class DEchoTest {
 		
 		query = "ECHO \"Hello, World!\"";
 		responses = SERVER.interpret(query);
+		
+		System.out.println("Hello, reports!");
 	};
 	
 	@Test
