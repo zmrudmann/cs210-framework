@@ -7,8 +7,16 @@
     <artifactId>example</artifactId>
     <version>1.0</version>
 
-  <sourceDirectory>/src/</sourceDirectory>
-  <testSourceDirectory>/test</testSourceDirectory>
+    <build>
+      <directory>${project.basedir}/target</directory>
+      <outputDirectory>${project.build.directory}/classes</outputDirectory>
+      <finalName>${project.artifactId}-${project.version}</finalName>
+      <testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+      <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+      <scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
+      <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
+  </build>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
