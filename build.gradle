@@ -21,10 +21,12 @@ test {
         showStackTraces true
         events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
 
-        debug.events = events
-        debug.exceptionFormat = exceptionFormat
-        info.events = debug.events
-        info.exceptionFormat = debug.exceptionFormat
+        afterSuite { desc, result ->
+            // if (!desc.parent) {
+                def output = "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
+                println(output)
+            // }
+        }
     }
     reports.html.destination 'reports/'
 }
