@@ -22,10 +22,11 @@ test {
         events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
 
         afterSuite { desc, result ->
-            // if (!desc.parent) {
-                def output = "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
+            if (!desc.parent) {
+                def percent = result.successfulTestCount / result.testCount
+                def output = "SUMMARY: ${percent}% passing, ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
                 println(output)
-            // }
+            }
         }
     }
     reports.html.destination 'reports/'
