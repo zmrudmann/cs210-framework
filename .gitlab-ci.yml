@@ -6,7 +6,7 @@ example-tests:
     only:
         - master
     script:
-        - gradle test -i
+        - gradle test
     artifacts:
         when: always
         name: reports
