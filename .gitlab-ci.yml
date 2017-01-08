@@ -14,10 +14,5 @@ tests:
         paths:
             - reports/
 
-cache:
-    paths:
-        - build
-        - .gradle/caches
-
-after_script:
-    - ls -R -a
+# after_script:
+#     - ls -R -a

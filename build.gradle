@@ -14,11 +14,7 @@ sourceSets {
 }
 
 test {
-    testLogging {
-        showStandardStreams true
-        exceptionFormat 'full'
-    }
-    reports {
-        html.destination 'reports/unit-tests'
-    }
+    testLogging.showStandardStreams true
+    testLogging.exceptionFormat 'full'
+    reports.html.destination 'reports/unit-tests'
 }
