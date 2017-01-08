@@ -16,7 +16,13 @@ sourceSets {
 test {
     testLogging {
         showStandardStreams true
-        exceptionFormat "full"
+        exceptionFormat 'full'
     }
-    reports.html.destination "reports"
+    reports.html.destination 'reports/junit'
+}
+
+apply plugin: 'jacoco'
+
+jacoco {
+    reports.html.destination 'reports/jacoco'
 }
