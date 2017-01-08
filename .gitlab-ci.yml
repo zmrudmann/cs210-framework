@@ -1,4 +1,5 @@
 image: frekele/gradle
+# need to customize this image
 
 example-tests:
     tags:
