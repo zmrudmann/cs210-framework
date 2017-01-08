@@ -12,6 +12,3 @@ example-tests:
         name: reports
         paths:
             - reports/
-
-# after_script:
-#     - ls -R -a

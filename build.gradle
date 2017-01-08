@@ -22,11 +22,7 @@ test {
         events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
 
         afterSuite { desc, result ->
-            if (!desc.parent) {
-                def percent = (int) (result.successfulTestCount / result.testCount * 100)
-                def output = "\n>>> [SUMMARY] ${percent}% passing | [${result.resultType} DETAILS] ${result.testCount} tests (${result.successfulTestCount} pass, ${result.failedTestCount} fail, ${result.skippedTestCount} skip) <<<"
-                println(output)
-            }
+            if (!desc.parent) println("[COVERAGE] ${result.successfulTestCount / result.testCount}%")
         }
     }
     reports.html.destination 'reports/'
