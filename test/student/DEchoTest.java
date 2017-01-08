@@ -29,11 +29,12 @@ public class DEchoTest {
 	public static void initialize() {
 		SERVER = new Server();
 		
-		query = "ECHO \"Hello, World!\"";
+		query = "ECHO \"Hello, world!\"";
 		responses = SERVER.interpret(query);
 		
-		System.out.println("Hello, reports!");
-		System.err.println("Hello, errors!");
+		System.out.println("Hello, standard output!");
+		
+		System.err.println("Hello, standard error!");
 	};
 	
 	@Test
