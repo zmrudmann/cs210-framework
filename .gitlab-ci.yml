@@ -1,8 +1,10 @@
 tests:
-    tags:
-        - java
-    only:
-        - master
+    tags: java
+    only: master
     script:
-        # - echo Hello, world!
         - mvn test
+    artifacts:
+        when: always
+        name: reports
+        paths:
+            - mycv.pdf
