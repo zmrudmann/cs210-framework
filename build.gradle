@@ -21,12 +21,12 @@ test {
         exceptionFormat 'full'
     }
     reports {
-        html.destination 'reports/junit'
+        html.destination 'reports/unit-tests'
     }
 }
 
 jacocoTestReport {
     reports {
-        html.destination "${buildDir}/jacocoHtml"
+        html.destination "reports/code-coverage"
     }
 }
