@@ -1,6 +1,8 @@
 tests:
-    tags: java
-    only: master
+    tags:
+        - java
+    only:
+        - master
     script:
         - mvn test
     artifacts:
