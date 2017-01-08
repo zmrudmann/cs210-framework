@@ -1,5 +1,3 @@
-# image: maven
-
 image: frekele/gradle
 
 tests:
@@ -8,7 +6,6 @@ tests:
     only:
         - master
     script:
-        # - mvn test
         - gradle test
 
     artifacts:
