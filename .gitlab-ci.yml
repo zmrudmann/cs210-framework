@@ -1,11 +1,16 @@
+# image: maven
+
+image: frekele/gradle
+
 tests:
     tags:
         - java
     only:
         - master
     script:
-        - mvn test
-        - ls .
+        # - mvn test
+        - gradle test
+
     # artifacts:
     #     when: always
     #     name: reports
