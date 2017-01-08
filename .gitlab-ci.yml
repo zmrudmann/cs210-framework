@@ -14,5 +14,5 @@ tests:
         paths:
             - reports/
 
-after_script:
-  - ls -R
+# after_script:
+#     - ls -R
