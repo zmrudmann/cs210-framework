@@ -1,13 +1,12 @@
 image: frekele/gradle
 
-tests:
+example-tests:
     tags:
         - java
     only:
         - master
     script:
-        - gradle test
-
+        - gradle test -i
     artifacts:
         when: always
         name: reports
