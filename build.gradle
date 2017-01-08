@@ -14,5 +14,6 @@ sourceSets {
 }
 
 test {
+    testLogging.showStandardStreams true
     reports.html.destination "reports"
 }
