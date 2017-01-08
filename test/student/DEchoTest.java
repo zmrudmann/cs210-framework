@@ -33,6 +33,7 @@ public class DEchoTest {
 		responses = SERVER.interpret(query);
 		
 		System.out.println("Hello, reports!");
+		System.err.println("Hello, errors!");
 	};
 	
 	@Test
