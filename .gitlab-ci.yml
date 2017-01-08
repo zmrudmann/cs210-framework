@@ -9,4 +9,4 @@ tests:
         when: always
         name: reports
         paths:
-            - mycv.pdf
+            - reports/
