@@ -25,8 +25,12 @@ test {
     }
 }
 
+jacoco {
+    reportsDir 'reports/code-coverage/ja'
+}
+
 jacocoTestReport {
     reports {
-        html.destination "reports/code-coverage"
+        html.destination 'reports/code-coverage/jatr'
     }
 }
