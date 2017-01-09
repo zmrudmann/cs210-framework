@@ -16,4 +16,5 @@ test:
     post:
         - mkdir -p $CIRCLE_TEST_REPORTS/junit/
         - find . -type f -regex ".*/build/reports/xml/.*\.xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-        - find . -type f -regex ".*/build/reports/html/" -exec cp {} $CIRCLE_TEST_REPORTS/gradle/ \;
+        - mkdir -p $CIRCLE_ARTIFACTS/gradle/
+        - find . -type f -regex ".*/build/reports/html/" -exec cp {} $CIRCLE_ARTIFACTS/gradle/ \;
