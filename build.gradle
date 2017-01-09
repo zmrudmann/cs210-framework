@@ -29,12 +29,13 @@ test {
             if (!desc.parent) println('\n[COVERAGE ' + Math.ceil(result.successfulTestCount / result.testCount * 100) + '%]')
         }
     }
-    //reports.html.destination 'reports/'
+    
+	reports.html.destination '$buildDir/reports/web/'
 	
 	reports {
 		junitXml{
 			enabled = true
-			destination = "$buildDir/reports/"
+			destination = "$buildDir/reports/raw/"
 		}
 	}
 }
