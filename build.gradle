@@ -30,12 +30,18 @@ test {
         }
     }
     
-	reports.html.destination '$buildDir/reports/web/'
+	// GitLab version
+	// reports.html.destination 'reports/'
 	
+	
+	// CircleCI version
+	reports.html.destination '$buildDir/reports/html/'
+	
+	// For CircleCI
 	reports {
 		junitXml{
 			enabled = true
-			destination = "$buildDir/reports/raw/"
+			destination = "$buildDir/reports/xml/"
 		}
 	}
 }
