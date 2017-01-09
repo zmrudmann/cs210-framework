@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.+'
 }
 
 sourceSets {
@@ -30,6 +30,13 @@ test {
         }
     }
     //reports.html.destination 'reports/'
+	
+	reports {
+		junitXml{
+			enabled = true
+			destination = "$buildDir/reports/"
+		}
+	}
 }
 
 // Needed for CircleCI Only
