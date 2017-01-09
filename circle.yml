@@ -1,0 +1,18 @@
+# Do not commit any changes to this file without special permission. Otherwise, your merge requests will be denied and you may be subject to academic fraud penalties at the discretion of the instructor.
+
+# TODO: This file is only needed for the GitHub Classroom + CircleCI option.
+
+machine:
+    java:
+        version: oraclejdk8
+
+dependencies:
+    pre:
+        - gradle wrapper
+
+test:
+    override:
+        - ./gradlew test
+    post:
+        - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+        - find . -type f -regex ".*/build/reports/.*\.xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
