@@ -14,5 +14,6 @@ test:
     override:
         - ./gradlew test
     post:
+    	- ls -R -a .
         - mkdir -p $CIRCLE_TEST_REPORTS/junit/
         - find . -type f -regex ".*/build/reports/.*\.xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
