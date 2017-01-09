@@ -32,7 +32,7 @@ test {
     reports.html.destination 'reports/'
 }
 
-# Needed for CircleCI Only
+// Needed for CircleCI Only
 task wrapper(type: Wrapper) {
     gradleVersion = "3.0"
 }
