@@ -1,5 +1,9 @@
+# Do not commit any changes to this file without special permission. Otherwise, your merge requests will be denied and you may be subject to academic fraud penalties at the discretion of the instructor.
+
+# TODO: This file is only needed for the GitLab option.
+
+# TODO: This Docker image needs to be customized.
 image: frekele/gradle
-# need to customize this image
 
 example-tests:
     tags:
