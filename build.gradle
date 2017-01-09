@@ -1,3 +1,7 @@
+// Do not commit any changes to this file without special permission. Otherwise, your merge requests will be denied and you may be subject to academic fraud penalties at the discretion of the instructor.
+
+// TODO: This file is needed for both of the Gradle options.
+
 apply plugin: 'java'
 
 repositories {
@@ -26,4 +30,9 @@ test {
         }
     }
     reports.html.destination 'reports/'
+}
+
+# Needed for CircleCI Only
+task wrapper(type: Wrapper) {
+    gradleVersion = "3.0"
 }
