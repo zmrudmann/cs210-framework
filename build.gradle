@@ -29,7 +29,7 @@ test {
             if (!desc.parent) println('\n[COVERAGE ' + Math.ceil(result.successfulTestCount / result.testCount * 100) + '%]')
         }
     }
-    reports.html.destination 'reports/'
+    //reports.html.destination 'reports/'
 }
 
 // Needed for CircleCI Only
